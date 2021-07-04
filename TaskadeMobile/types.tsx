@@ -4,7 +4,10 @@
  */
 
 export type RootStackParamList = {
-  Root: undefined;
+  Home: undefined;
+  ToDoScreen: undefined;
+  SignIn: undefined;
+  SignUp: undefined;
   NotFound: undefined;
 };
 

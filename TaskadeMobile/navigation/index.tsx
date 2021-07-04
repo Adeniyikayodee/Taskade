@@ -9,9 +9,16 @@ import * as React from 'react';
 import { ColorSchemeName } from 'react-native';
 
 import NotFoundScreen from '../screens/NotFoundScreen';
+import ProjectsScreen from '../screens/ProjectsScreen';
+import ToDoScreen from '../screens/ToDoScreen';
+import SignInScreen from '../screens/SignInScreen';
+import SignUpScreen from '../screens/SignUpScreen';
+import SplashScreen from '../screens/SplashScreen';
+
 import { RootStackParamList } from '../types';
 import BottomTabNavigator from './BottomTabNavigator';
 import LinkingConfiguration from './LinkingConfiguration';
+import { FA5Style } from '@expo/vector-icons/build/FontAwesome5';
 
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
   return (
@@ -29,8 +36,36 @@ const Stack = createStackNavigator<RootStackParamList>();
 
 function RootNavigator() {
   return (
-    <Stack.Navigator screenOptions={{ headerShown: false }}>
-      <Stack.Screen name="Root" component={BottomTabNavigator} />
+    <Stack.Navigator>
+      <Stack.Screen 
+        name="Splash"
+        component={SplashScreen}
+        options={{
+          headerShown: false
+        }}
+      />
+
+
+      <Stack.Screen 
+        name="SignIn"
+        component={SignInScreen}
+        options={{
+          title: "Sign In"
+        }}
+      />
+
+      <Stack.Screen 
+        name="SignUp"
+        component={SignUpScreen}
+        options={{
+          title: "Sign Up"
+        }}
+      />
+
+      <Stack.Screen name="Home" component={ProjectsScreen} />
+      <Stack.Screen name="ToDoScreen" component={ToDoScreen} />
+
+
       <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
     </Stack.Navigator>
   );
