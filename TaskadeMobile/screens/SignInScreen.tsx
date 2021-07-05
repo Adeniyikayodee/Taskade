@@ -49,7 +49,7 @@ const SignInScreen = () => {
   return (
     <View style={{ padding: 20 }}>
       <TextInput 
-        placeholder="vadim@notjust.dev"
+        placeholder="kayode@rovaorbital.com"
         value={email}
         onChangeText={setEmail}
         style={{

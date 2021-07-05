@@ -70,7 +70,7 @@ const SignUpScreen = () => {
       />
 
       <TextInput 
-        placeholder="vadim@notjust.dev"
+        placeholder="kayode@rovaorbital.com"
         value={email}
         onChangeText={setEmail}
         style={{
