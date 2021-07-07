@@ -1,7 +1,7 @@
 # Taskade
 Helps you work better with teams. 
 
-# Work In Progress...
+# Work In Progress; to fix minor bugs
 
 # To run backend
 
